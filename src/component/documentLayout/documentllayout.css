@@ -1,0 +1,97 @@
+
+.generatePdf-btn{
+  position: absolute;
+  width: auto;
+  padding: 10px;
+  display: flex;
+  background-color: black;
+  color: white;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  bottom: 30px;
+  right: 20px;
+}
+
+.generatePdf-btn img{
+  width: 20px;
+  height: auto;
+}
+
+.file-container {
+   padding: 40px;
+   padding-left: 70px;
+   padding-right: 70px;
+}
+.file-container .header-section h1{
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.file-container .header-section h2{
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: normal;
+  font-size: 20px;
+  font-size: 16px;
+}
+
+.file-container .header-section p{
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: normal;
+  font-size: 20px;
+  font-size: 16px;
+}
+
+.file-container .body-section {
+  margin-top: 20px;
+}
+.file-container .body-section h2{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 19px;
+}
+
+.file-container .body-section p{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: normal;
+  font-size: 14px;
+  text-align: justify;
+}
+ .line{
+  height: 1px;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  margin-top: 15px;
+}
+
+.file-container .body-section .sub-section {
+  margin-top: 8px;
+}
+
+.file-container .body-section .sub-section h2{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+
+.file-container .body-section .sub-section li{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: normal;
+  font-size: 14px;
+  text-align: justify;
+}
+
+.skill-container{
+   display: flex;
+   gap: 10px;
+   margin-top: 8px;
+   max-width: 400px;
+   flex-wrap: wrap;
+}

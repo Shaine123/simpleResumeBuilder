@@ -1,0 +1,186 @@
+.container {
+   padding: 40px 50px;
+}
+
+.container .header h1,p {
+   font-family: 'Poppins';
+}
+
+.container .header h1{
+   margin-bottom: 0;
+   font-size: 40px;
+}
+
+.container .header p{
+  margin-top:  0;
+  color: rgb(71, 60, 60);
+}
+
+
+.container .hero-container{
+   display: flex;
+   gap: 20px;
+   min-width: 80vw;
+   height: auto;
+   margin-top: 20px;
+}
+
+.container .hero-container .resume-main{
+  flex: 1;
+  max-width: 45%;
+}
+
+.container .hero-container .resume-main .resume-content{
+ min-height: 70vh;
+ max-width: 100%;
+ background-color: white;
+ border-radius: 0px 0 10px 10px;
+ box-shadow: 14px 10px 0px 0px rgba(0,0,0,0.75);
+ -webkit-box-shadow: 14px 10px 0px 0px rgba(0,0,0,0.75);
+ -moz-box-shadow: 14px 10px 0px 0px rgba(0,0,0,0.75);
+ padding: 20px;
+ position: relative;
+}
+
+.content-btn{
+  position: absolute;
+   width: auto;
+   padding: 10px;
+   display: flex;
+   background-color: black;
+   color: white;
+   align-items: center;
+   gap: 10px;
+   border-radius: 5px;
+   border: none;
+   cursor: pointer;
+   bottom: 20px;
+   right: 20px;
+}
+
+.content-btn img{
+   width: 25px;
+   height: auto;
+}
+
+
+
+ .container .hero-container .resume-main .resume-content .content h1{
+    font-size: 25px;
+    font-weight: 500;
+ }
+
+ .container .hero-container .resume-main .resume-content .content form{
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   justify-content: center;
+   margin-top: 10px;
+}
+
+.container .hero-container .resume-main .resume-content .content form .input-container{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.container .hero-container .resume-main .resume-content .content form .input-container-date{
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+
+.container .hero-container .resume-main .resume-content .content form .input-container-date .input-container {
+  width: 100%;
+}
+
+.container .hero-container .resume-main .resume-content .content form .input-container-date .input-container input{
+  height: 35px;
+  padding-left: 15px;
+  border: 1px solid rgb(213, 208, 208);
+  border-radius: 4px;
+}
+
+.container .hero-container .resume-main .resume-content .content form .input-container label{
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.container .hero-container .resume-main .resume-content .content form .input-container input{
+   height: 35px;
+   padding-left: 15px;
+   border: 1px solid rgb(213, 208, 208);
+   border-radius: 4px;
+}
+
+.container .hero-container .resume-main .resume-content .content form .input-container textarea{
+  resize: none;
+  padding-left: 15px;
+  height: 70px;
+  border: 1px solid rgb(213, 208, 208);
+  border-radius: 4px;
+}
+
+
+
+.container .hero-container .resume-main ul {
+   list-style-type: none;
+   display: flex;
+   flex-wrap: wrap;
+}
+.container .hero-container .resume-main ul li {
+  cursor: pointer;
+  padding: 7px 28px;
+}
+
+.active{
+   background-color: white;
+   border-radius: 5px 5px 0 0;
+}
+
+.container .hero-container .resume-output{
+  flex: 1;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 14px 10px 0px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 14px 10px 0px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 14px 10px 0px 0px rgba(0,0,0,0.75);
+  position: relative;
+}
+
+.sub-form-container{
+  margin-left: 5px;
+}
+
+.sub-form-container .result-container{
+   display: flex;
+   gap: 10px;
+   align-items: center;
+}
+.sub-form-container .result-container p{
+  font-size: 12px;
+}
+
+.sub-form-container .result-container button{
+  color: white;
+  background-color: black;
+  padding: 0.1rem 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.skills-container{
+   border: 2px solid black;
+   padding: 4px 0;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-radius: 20px;
+}
+
+.footer-text{
+   font-style: italic;
+   font-size: 12px;
+  text-decoration: underline;
+}
