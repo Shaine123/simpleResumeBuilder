@@ -1,7 +1,7 @@
 
 import React, { isValidElement, useEffect, useRef, useState } from 'react'
 import './homepage.css'
-import { PlusIcon } from '../../assets/images'
+import { MenuIcon, PlusIcon } from '../../assets/images'
 import DocumentLayout from '../documentLayout/DocumentLayout'
 const HomePage = () => {
    
@@ -38,7 +38,9 @@ const HomePage = () => {
   const activeInput = useRef(null)
 
   useEffect(() => {
-    activeInput.current.focus()
+    if(activeTab !== 6){
+      activeInput.current.focus()
+    }
   }, [activeTab])
 
 
@@ -196,24 +198,46 @@ const HomePage = () => {
       }
   }
 
+  const [openMenu, setOpenMenu] = useState(false)
 
+  const handleMenu = () => {
+      setOpenMenu(!openMenu)
+  }
+
+  const [showResults,setShowResults] = useState(false)
+  
   return (
     <div className = 'container'>
         <div className="header">
             <h1>Simple Resume Builder</h1>
             <p>Create your professionnal resume in just a few minutes</p>
         </div>
-
         <div className="hero-container">
-           <div className="resume-main">
-              <ul>
+          <div className="side-bar">
+          <button className='hamburger-btn' onClick={handleMenu}>
+                 <img src={MenuIcon} alt="menu" />
+              </button>
+              <ul style={openMenu ? {left:'0px'} : {left:'-1000px'}}>
+                 <li onClick={() => handleTabs(1)} className= {`${activeTab == 1 ? 'active' : ''}`}>Personal</li>
+                 <li onClick={() => handleTabs(2)} className= {`${activeTab == 2 ? 'active' : ''}`}>Experience</li>
+                 <li onClick={() => handleTabs(3)} className= {`${activeTab == 3 ? 'active' : ''}`}>Education</li>
+                 <li onClick={() => handleTabs(4)} className= {`${activeTab == 4 ? 'active' : ''}`}>Skills</li>
+                 <li onClick={() => handleTabs(5)} className= {`${activeTab == 5 ? 'active' : ''}`}>Projects</li>
+                 <li onClick={() => {
+                   handleTabs(6)
+                   setShowResults(!showResults)
+                 }} className= {`${activeTab == 6 ? 'active' : ''}`}>Results</li>
+              </ul>
+          </div>
+           <div className="resume-main" >
+              <ul style={openMenu ? {left:'0px'} : {left:'-1000px'}}>
                  <li onClick={() => handleTabs(1)} className= {`${activeTab == 1 ? 'active' : ''}`}>Personal</li>
                  <li onClick={() => handleTabs(2)} className= {`${activeTab == 2 ? 'active' : ''}`}>Experience</li>
                  <li onClick={() => handleTabs(3)} className= {`${activeTab == 3 ? 'active' : ''}`}>Education</li>
                  <li onClick={() => handleTabs(4)} className= {`${activeTab == 4 ? 'active' : ''}`}>Skills</li>
                  <li onClick={() => handleTabs(5)} className= {`${activeTab == 5 ? 'active' : ''}`}>Projects</li>
               </ul>
-              <div className="resume-content">
+              <div className="resume-content" >
                 {
                    activeTab == 1 ? 
                    <div className="content">
@@ -847,7 +871,7 @@ const HomePage = () => {
                 }
               </div>
            </div>
-           <div className="resume-output">
+           <div className={ `${showResults ? 'show-output' : 'resume-output'}`} >
                  <DocumentLayout
                   personalInfo = {personalInfo} 
                   experience = {experience}
