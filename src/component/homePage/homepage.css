@@ -41,6 +41,7 @@
  -moz-box-shadow: 14px 10px 0px 0px rgba(0,0,0,0.75);
  padding: 20px;
  position: relative;
+
 }
 
 .content-btn{
@@ -57,6 +58,7 @@
    cursor: pointer;
    bottom: 20px;
    right: 20px;
+   margin-top: 20px;
 }
 
 .content-btn img{
@@ -89,8 +91,12 @@
   display: flex;
   flex-direction: row;
   gap: 5px;
+  flex-wrap: wrap;
 }
 
+.container .hero-container .resume-main .resume-content .content form .input-container-date .input-container{
+  flex: 1;
+}
 
 .container .hero-container .resume-main .resume-content .content form .input-container-date .input-container {
   width: 100%;
@@ -189,7 +195,8 @@
    font-size: 12px;
    text-decoration: underline;
    position: absolute;
-   bottom:  10px;
+   bottom:  -25px;
+   left: 20px;
 }
 
 /* .side-bar{
@@ -207,9 +214,7 @@
  padding: 7px 28px;
 }
 
-.container .hero-container .side-bar ul li:nth-child(6) {
-display: none;
-}
+
 
 .side-bar .hamburger-btn{
   position: absolute;
@@ -230,9 +235,17 @@ display: none;
 @media only  screen and (max-width: 600px) {
 
   .container { 
-    padding-left: 10px;
-    padding-right: 0;
+    padding-left: 0px;
+    padding-right: 20px;
   }
+
+  .container .hero-container .resume-main .resume-content{
+    border-radius: 10px 10px 10px 10px;
+   }
+
+   .container .hero-container .resume-output{
+    border-radius: 10px;
+   }
   
   .container .header h1{
     text-align: center;
@@ -266,6 +279,18 @@ display: none;
     border-radius: 0 5px 5px 0;
   }
 
+  .container .hero-container .side-bar ul li{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 17px;
+  }
+
+  .container .hero-container .side-bar ul li:nth-child(6){
+    font-style: italic;
+    text-decoration: underline;
+  }
+
+
   .active{
     background-color: #BFD0E0;
   }
@@ -287,9 +312,6 @@ display: none;
     position: relative;
   }
 
-  .container .hero-container .resume-main ul li:nth-child(6) {
-    display: block;
-   }
    
 
 }

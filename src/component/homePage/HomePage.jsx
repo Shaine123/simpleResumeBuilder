@@ -47,6 +47,10 @@ const HomePage = () => {
 
   const handleTabs = (id) => {
        setActiveTab(id)
+
+       if(id !== 6){
+          setShowResults(false)
+       }
   }
 
   const handleSubmit = (id) => {
@@ -226,10 +230,10 @@ const HomePage = () => {
                  <li onClick={() => {
                    handleTabs(6)
                    setShowResults(!showResults)
-                 }} className= {`${activeTab == 6 ? 'active' : ''}`}>Results</li>
+                 }} className= {`${activeTab == 6 ? 'active' : ''}`}>Output</li>
               </ul>
           </div>
-           <div className="resume-main" >
+           <div className="resume-main" style={showResults ? {display: 'none'} : {display: 'block'}} >
               <ul style={openMenu ? {left:'0px'} : {left:'-1000px'}}>
                  <li onClick={() => handleTabs(1)} className= {`${activeTab == 1 ? 'active' : ''}`}>Personal</li>
                  <li onClick={() => handleTabs(2)} className= {`${activeTab == 2 ? 'active' : ''}`}>Experience</li>
