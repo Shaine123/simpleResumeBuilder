@@ -195,7 +195,7 @@
    font-size: 12px;
    text-decoration: underline;
    position: absolute;
-   bottom:  -25px;
+   bottom:  -50px;
    left: 20px;
 }
 
@@ -239,6 +239,7 @@
     padding-right: 20px;
   }
 
+
   .container .hero-container .resume-main .resume-content{
     border-radius: 10px 10px 10px 10px;
    }
@@ -249,7 +250,12 @@
   
   .container .header h1{
     text-align: center;
- }
+    margin-top: 20px;
+  }
+
+ .container .header p{
+     text-align: center;
+  }
   .container .hero-container .resume-output{
     display: none;
   }
@@ -257,6 +263,7 @@
   .container .hero-container .resume-main{
     flex: 1;
     min-width: 80vw;
+    margin: auto;
   }
 
   .container .hero-container .resume-main ul {
